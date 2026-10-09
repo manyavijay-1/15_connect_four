@@ -1,4 +1,3 @@
-```python
 import random
 
 
@@ -46,4 +45,3 @@ class AI:
 
         # Randomly choose among equally preferred columns.
         return random.choice(preferred)
-```
