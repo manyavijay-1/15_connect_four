@@ -74,6 +74,12 @@ class Game:
                     return
                 continue
 
+            # Task 4 - Report each successful move exactly once.
+            if self.turn == "X":
+                print(f"You dropped X in column {col + 1}.")
+            else:
+                print(f"AI dropped O in column {col + 1}.")
+
             # Check for a win immediately after the move.
             if self.board.winner(self.turn):
                 self.board.print()
