@@ -18,8 +18,10 @@ class Board:
         return all(self.grid[0][c] != "." for c in range(COLS))
 
     def winner(self, token):
-
-        directions = [(0, 1), (1, 0)]
+        # (row step, col step): right, down, down-right, down-left.
+        # Scanning from every cell and only looking "forward" covers each
+        # possible line of four exactly once in all four orientations.
+        directions = [(0, 1), (1, 0), (1, 1), (1, -1)]
         for r in range(ROWS):
             for c in range(COLS):
                 if self.grid[r][c] != token:
