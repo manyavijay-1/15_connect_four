@@ -1,4 +1,3 @@
-```python
 from board import Board
 from ai import AI
 
@@ -97,4 +96,3 @@ class Game:
 
             # Switch turns only when the game is still active.
             self.turn = "O" if self.turn == "X" else "X"
-```
